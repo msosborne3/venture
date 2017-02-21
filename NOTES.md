@@ -17,6 +17,10 @@ Post
 belongs to User
 belongs to Place
 
+Keyword
+name:string
+??
+
 
 ## Database
 
