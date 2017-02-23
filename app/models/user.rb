@@ -35,4 +35,8 @@ class User < ApplicationRecord
     user = User.find_by(id: user_id)
     self.followers.include?(user) ? true : false
   end
+
+  def full_name
+    full_name = self.first_name + " " + self.last_name
+  end
 end
