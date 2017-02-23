@@ -1,0 +1,6 @@
+<% if @user == current_user %>
+    <h2>Welcome, <%= current_user.first_name %></h2>
+  <% else %>
+    <%= link_to 'Following', unfollow_user_path, %>
+  <% end %>
+<% end %>
