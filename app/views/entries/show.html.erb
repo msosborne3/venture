@@ -1,3 +1,11 @@
 <h2><%= @entry.title %></h2>
+<h4>Created By: <%= @entry.user.first_name %> <%= @entry.user.last_name %></h4>
+<h4><%= to_date(@entry.created_at) %></h4>
 
 <p><%= @entry.content %></p>
+
+<% if @entry.user == current_user %>
+  <%= link_to "Edit Journal Entry", edit_entry_path(@entry) %>
+  <%= link_to 'Delete Journal Entry', entry_path(@entry),
+              data: {:confirm => 'Are you sure?'}, :method => :delete %>
+<% end %>

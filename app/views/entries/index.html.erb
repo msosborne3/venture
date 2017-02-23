@@ -2,10 +2,6 @@
 
 <ul>
   <% @entries.each do |entry| %>
-    <li>
-      <%= entry.title %><br>
-      <%= entry.content %><br>
-      <br>
-    </li>
+    <%= render partial: 'entry', locals: {entry: entry} %>
   <% end %>
 </ul>

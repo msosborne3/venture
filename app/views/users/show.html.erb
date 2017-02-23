@@ -7,3 +7,9 @@
     <%= link_to "Follow", follow_user_path, method: :post %>
   <% end %>
 <% end %>
+
+<ul>
+  <% @user.entries.each do |entry| %>
+    <%= render partial: 'entries/entry', locals: {entry: entry} %>
+  <% end %>
+</ul>

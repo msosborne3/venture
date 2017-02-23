@@ -2,11 +2,6 @@
 
 <ul>
   <% @following_entries.each do |entry| %>
-    <li>
-      Author: <%= entry.entry_user.first_name %> <%= entry.entry_user.last_name %><br>
-      <%= entry.title %><br>
-      <%= entry.content %><br>
-      <br>
-    </li>
+    <%= render partial: 'entries/entry', locals: {entry: entry} %>
   <% end %>
 </ul>
