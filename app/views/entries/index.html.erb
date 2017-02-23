@@ -1,0 +1,11 @@
+<h2><%= current_user.first_name %>'s Journal Entries</h2>
+
+<ul>
+  <% @entries.each do |entry| %>
+    <li>
+      <%= entry.title %><br>
+      <%= entry.content %><br>
+      <br>
+    </li>
+  <% end %>
+</ul>
