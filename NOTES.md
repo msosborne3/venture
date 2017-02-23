@@ -55,3 +55,20 @@ link: ?
 ## Style
 Each profile page lists all Places(boards)
 Interactive Map at the top of each page that has pins in places traveled and different pins for places planning to travel
+
+
+## Tips 
+from stack overflow for dealing with followers based on twitter:
+
+rails generate model Person name:string
+rails generate model Followings person_id:integer follower_id:integer blocked:boolean
+
+class Person < ActiveRecord::Base
+  has_many :followers, :class_name => 'Followings', :foreign_key => 'person_id'
+  has_many :following, :class_name => 'Followings', :foreign_key => 'follower_id' 
+end
+
+class Followings < ActiveRecord::Base
+  belongs_to :person
+  belongs_to :follower, :class_name => 'Person'
+end
