@@ -20,4 +20,44 @@ RSpec.describe User, type: :model do
     expect(@user.following_relationships.length).to eq(1)
   end
 
+  describe ".follow" do
+
+    before(:each) do
+      @user1 = User.create(first_name: "Luke", last_name: "Danes", email: 'luke@starshollow.com', password: 'coffee', password_confirmation: "coffee")
+      @user2 = User.create(first_name: "Logan", last_name: "Huntzberger", email: 'logan@huntzberger.com', password: 'coffee', password_confirmation: "coffee")
+    end
+
+    it "follows a user" do
+      @user1.follow(@user2.id)
+      expect(@user1.following).to include(@user2)
+    end
+
+    it "makes self a follower of the followed user" do
+      @user1.follow(@user2.id)
+      expect(@user2.followers).to include(@user1)
+    end 
+  end
+
+  describe ".unfollow" do
+
+    before(:each) do
+      @user1 = User.create(first_name: "Luke", last_name: "Danes", email: 'luke@starshollow.com', password: 'coffee', password_confirmation: "coffee")
+      @user2 = User.create(first_name: "Logan", last_name: "Huntzberger", email: 'logan@huntzberger.com', password: 'coffee', password_confirmation: "coffee")
+    end
+
+    it "follows a user" do
+      @user1.follow(@user2.id)
+      expect(@user1.following).to include(@user2)
+      @user1.unfollow(@user2.id)
+      expect(@user1.following).to_not include(@user2)
+    end
+
+    it "makes self a follower of the followed user" do
+      @user1.follow(@user2.id)
+      expect(@user2.followers).to include(@user1)
+      @user1.unfollow(@user2.id)
+      expect(@user2.followers).to_not include(@user1)
+    end 
+  end
+
 end
