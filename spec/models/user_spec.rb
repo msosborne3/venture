@@ -71,4 +71,17 @@ RSpec.describe User, type: :model do
       expect(@user1.following?(@user2.id)).to be_truthy
     end
   end
+
+   describe ".followers?" do
+    before(:each) do
+      @user1 = User.create(first_name: "Luke", last_name: "Danes", email: 'luke@starshollow.com', password: 'coffee', password_confirmation: "coffee")
+      @user2 = User.create(first_name: "Logan", last_name: "Huntzberger", email: 'logan@huntzberger.com', password: 'coffee', password_confirmation: "coffee")
+    end
+
+    it "returns true if a user is following the given user" do
+      @user1.follow(@user2.id)
+      expect(@user2.followers?(@user1.id)).to be_truthy
+    end
+  end
+
 end
