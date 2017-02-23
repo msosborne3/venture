@@ -34,7 +34,7 @@ user_id:integer
 
 Entry
 user_id:integer
-title:integer
+title:string
 content:text
 
 User
