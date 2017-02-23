@@ -36,6 +36,7 @@ class User < ApplicationRecord
     self.followers.include?(user) ? true : false
   end
 
+  # Returns a users full name by adding the first and last names
   def full_name
     full_name = self.first_name + " " + self.last_name
   end
