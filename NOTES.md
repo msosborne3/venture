@@ -26,16 +26,27 @@ name:string
 
 Journal
 user_id:integer
+- on second thought, I'm not sure journal needs to be its own model. Maybe to have followers, but for now users can only follow people.
+
+
+-Entry
+-journal_id:integer
 
 Entry
-journal_id:integer
+user_id:integer
+title:integer
+content:text
 
 User
-profile_picture: ?
+profile_picture: ? (use paperclip)
 first_name:string
 last_name:string
 email:string
-journal_id:integer
+
+Followings
+user_id:integer
+follower_id:integer
+
 
 Connection? (May use to join users)
 
@@ -46,10 +57,10 @@ created_by:integer
 
 Post
 name:string
-content: ?
+image: ? (use paperclip)
 user_id:integer
 description:text
-link: ?
+link:string
 
 
 ## Style
@@ -72,3 +83,19 @@ class Followings < ActiveRecord::Base
   belongs_to :person
   belongs_to :follower, :class_name => 'Person'
 end
+
+
+## Game Plan
+
+Initially just set up the application with the journal functionality. Users can add journal posts.
+They can follow people and see their journal posts.
+User's own journal posts can be displayed on their own profile page.
+Profile page has a settings feature that can edit profile information.
+
+Add later: When a journal is created, it is associated with a specific location.
+Add later: photo posts
+
+
+
+
+
