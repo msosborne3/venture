@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Entry.create(user_id: 1, title: "Hello World!", content: "Hello hello hello!!")
+Entry.create(user_id: 1, title: "This is a super cool title!", content: "And this is some even cooler content!")
+Entry.create(user_id: 2, title: "Hi! This is a title", content: "Hello! Do you like my content?")
+Entry.create(user_id: 3, title: "Title!", content: "Content!")
