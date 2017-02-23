@@ -1,2 +1,11 @@
-<h1>Entries#index</h1>
-<p>Find me in app/views/entries/index.html.erb</p>
+<h2><%= current_user.first_name %>'s Journal Entries</h2>
+
+<ul>
+  <% @entries.each do |entry| %>
+    <li>
+      <%= entry.title %><br>
+      <%= entry.content %><br>
+      <br>
+    </li>
+  <% end %>
+</ul>
