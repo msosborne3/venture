@@ -45,14 +45,14 @@ RSpec.describe User, type: :model do
       @user2 = User.create(first_name: "Logan", last_name: "Huntzberger", email: 'logan@huntzberger.com', password: 'coffee', password_confirmation: "coffee")
     end
 
-    it "follows a user" do
+    it "unfollows a user" do
       @user1.follow(@user2.id)
       expect(@user1.following).to include(@user2)
       @user1.unfollow(@user2.id)
       expect(@user1.following).to_not include(@user2)
     end
 
-    it "makes self a follower of the followed user" do
+    it "removes self as a follower of the followed user" do
       @user1.follow(@user2.id)
       expect(@user2.followers).to include(@user1)
       @user1.unfollow(@user2.id)
@@ -60,4 +60,15 @@ RSpec.describe User, type: :model do
     end 
   end
 
+  describe ".following?" do
+    before(:each) do
+      @user1 = User.create(first_name: "Luke", last_name: "Danes", email: 'luke@starshollow.com', password: 'coffee', password_confirmation: "coffee")
+      @user2 = User.create(first_name: "Logan", last_name: "Huntzberger", email: 'logan@huntzberger.com', password: 'coffee', password_confirmation: "coffee")
+    end
+
+    it "returns true if a user is following the given user" do
+      @user1.follow(@user2.id)
+      expect(@user1.following?(@user2.id)).to be_truthy
+    end
+  end
 end

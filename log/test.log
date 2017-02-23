@@ -2937,3 +2937,225 @@
   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."follower_id" WHERE "follow_relationships"."following_id" = ?[0m  [["following_id", 3]]
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (6.8ms)[0m  [1m[31mDELETE FROM "entries";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'entries';[0m
+  [1m[35m (1.0ms)[0m  [1m[31mDELETE FROM "follow_relationships";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'follow_relationships';[0m
+  [1m[35m (1.5ms)[0m  [1m[31mDELETE FROM "users";[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (0.8ms)[0m  [1m[31mDELETE FROM "ar_internal_metadata";[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.1ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'ar_internal_metadata';[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rory@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rory"], ["last_name", "Gilmore"], ["email", "rory@starshollow.com"], ["encrypted_password", "$2a$04$8GakaoaMxToYIGnEOIfKueisYjfLPmL1MRHjus0qJl8n2dkYbY2Aa"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "entries" ("user_id", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["user_id", 1], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "entries" WHERE "entries"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (1.9ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rory@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rory"], ["last_name", "Gilmore"], ["email", "rory@starshollow.com"], ["encrypted_password", "$2a$04$ylKoed4eWhFr6k5ZzR7v0.HJjAv4jyjsdQjMfurhENb88HjJYoQUe"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mFollowRelationship Load (0.1ms)[0m  [1m[34mSELECT "follow_relationships".* FROM "follow_relationships" WHERE "follow_relationships"."following_id" = ?[0m  [["following_id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rory@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rory"], ["last_name", "Gilmore"], ["email", "rory@starshollow.com"], ["encrypted_password", "$2a$04$X4giBIMT8O86fbBGZRjDEO3V8FASzad5vC5kNpLcd1EM2V9XKhyFC"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mFollowRelationship Load (0.1ms)[0m  [1m[34mSELECT "follow_relationships".* FROM "follow_relationships" WHERE "follow_relationships"."follower_id" = ?[0m  [["follower_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rory@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rory"], ["last_name", "Gilmore"], ["email", "rory@starshollow.com"], ["encrypted_password", "$2a$04$wUmvYoc1qfynuWgXFWT8C.FvRgUgDzurkrUdafa5z.Vs85Q9olYGu"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luke@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Luke"], ["last_name", "Danes"], ["email", "luke@starshollow.com"], ["encrypted_password", "$2a$04$V0NrMKh68khmURGPIsKZZeVAAz6fyhWOEDizrfduape8iSlJIsLDq"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "logan@huntzberger.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Logan"], ["last_name", "Huntzberger"], ["email", "logan@huntzberger.com"], ["encrypted_password", "$2a$04$uEhUUYX76fd0uAUV/hRpSO816A2Im3UbEXxwTV1jc51huNdwLSg/6"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "follow_relationships" ("following_id", "follower_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["following_id", 3], ["follower_id", 2], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 2], ["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rory@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rory"], ["last_name", "Gilmore"], ["email", "rory@starshollow.com"], ["encrypted_password", "$2a$04$DM8AwXokl7PmEzSzbYCX9.AuBkw9sF/uhNnBmG8KxBZ7lrJ8ZDXd6"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luke@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Luke"], ["last_name", "Danes"], ["email", "luke@starshollow.com"], ["encrypted_password", "$2a$04$kNLZZvhWsb968q0vGEucX.9tnx0pi6BcC2.FEY4HIz/Wo24wu4TUO"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "logan@huntzberger.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Logan"], ["last_name", "Huntzberger"], ["email", "logan@huntzberger.com"], ["encrypted_password", "$2a$04$yT1Z2mgJbRbDffwha/zzh.nsRMIhSRXOxy7xVqZqWE8DFMTFwTpZe"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "follow_relationships" ("following_id", "follower_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["following_id", 3], ["follower_id", 2], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."follower_id" WHERE "follow_relationships"."following_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["following_id", 3], ["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rory@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rory"], ["last_name", "Gilmore"], ["email", "rory@starshollow.com"], ["encrypted_password", "$2a$04$3iOxfZXqffEQsc7fnOeNGeWSbGdAZwV1OT3/ZXPK/Gj8Mu8ljvUUm"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luke@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Luke"], ["last_name", "Danes"], ["email", "luke@starshollow.com"], ["encrypted_password", "$2a$04$ELdZ38SJ9lHC75qm32T7cOZZAdLBDIVixGlEjWcNMDpkxnIpzMcga"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "logan@huntzberger.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Logan"], ["last_name", "Huntzberger"], ["email", "logan@huntzberger.com"], ["encrypted_password", "$2a$04$PU9bD8PsK/4w4LGKFreR3OEYsa/igB7NyA4T6tSr84F1p98n6g6TO"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "follow_relationships" ("following_id", "follower_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["following_id", 3], ["follower_id", 2], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 2], ["id", 3], ["LIMIT", 1]]
+  [1m[36mFollowRelationship Load (0.1ms)[0m  [1m[34mSELECT  "follow_relationships".* FROM "follow_relationships" WHERE "follow_relationships"."follower_id" = ? AND "follow_relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "follow_relationships" WHERE "follow_relationships"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 2], ["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rory@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rory"], ["last_name", "Gilmore"], ["email", "rory@starshollow.com"], ["encrypted_password", "$2a$04$WGlcOATPyZWE.YqZLQU0Y.wwFXhxMKZQAFEeP9PtyU3h9LL5m3Hta"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luke@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Luke"], ["last_name", "Danes"], ["email", "luke@starshollow.com"], ["encrypted_password", "$2a$04$lw1mtqnR6lZadSXcH3AgyOja817nRf/55YloFBkha.S6ZWT0cgvlu"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "logan@huntzberger.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Logan"], ["last_name", "Huntzberger"], ["email", "logan@huntzberger.com"], ["encrypted_password", "$2a$04$sdL5ocnsX3lpWP4.ut5G9.I4Vs3No1RsnLVuXZlAMcIOX1hgIhzpu"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "follow_relationships" ("following_id", "follower_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["following_id", 3], ["follower_id", 2], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."follower_id" WHERE "follow_relationships"."following_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["following_id", 3], ["id", 2], ["LIMIT", 1]]
+  [1m[36mFollowRelationship Load (0.1ms)[0m  [1m[34mSELECT  "follow_relationships".* FROM "follow_relationships" WHERE "follow_relationships"."follower_id" = ? AND "follow_relationships"."following_id" = ? LIMIT ?[0m  [["follower_id", 2], ["following_id", 3], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "follow_relationships" WHERE "follow_relationships"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."follower_id" WHERE "follow_relationships"."following_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["following_id", 3], ["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."follower_id" WHERE "follow_relationships"."following_id" = ?[0m  [["following_id", 3]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rory@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Rory"], ["last_name", "Gilmore"], ["email", "rory@starshollow.com"], ["encrypted_password", "$2a$04$lapRgaarobwwp3Kn77DrKuCHtv0uZqYKNNW4x7r3Iqhvt0RHtV.Se"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luke@starshollow.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Luke"], ["last_name", "Danes"], ["email", "luke@starshollow.com"], ["encrypted_password", "$2a$04$FYmMmPaPkmJtglSEFg2DQu1jcNnbAMOil3/rMKmqG3gj6eezLQxn6"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists (0.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "logan@huntzberger.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "users" ("first_name", "last_name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["first_name", "Logan"], ["last_name", "Huntzberger"], ["email", "logan@huntzberger.com"], ["encrypted_password", "$2a$04$y6Gemflqcf1iU.HKEBpIH.V/3zACAsy1o4.1z2mgZi.pxW/HUf8Yu"], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO "follow_relationships" ("following_id", "follower_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["following_id", 3], ["follower_id", 2], ["created_at", 2017-02-23 16:13:51 UTC], ["updated_at", 2017-02-23 16:13:51 UTC]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ? AND "users"."id" = ? LIMIT ?[0m  [["follower_id", 2], ["id", 3], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
