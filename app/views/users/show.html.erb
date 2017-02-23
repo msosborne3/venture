@@ -2,8 +2,8 @@
   <h2>Welcome, <%= current_user.first_name %></h2>
 <% else %>
   <% if current_user.following?(@user.id) %>
-    <%= link_to "Unfollow", unfollow_user_path %>
+    <%= link_to "Unfollow", unfollow_user_path, method: :post %>
   <% else %>
-    <%= link_to "Follow", follow_user_path %>
+    <%= link_to "Follow", follow_user_path, method: :post %>
   <% end %>
 <% end %>
