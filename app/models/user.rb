@@ -28,4 +28,11 @@ class User < ApplicationRecord
     user = User.find_by(id: user_id)
     self.following.include?(user) ? true : false
   end
+
+  # Determines whether or not the given user is a follower of
+  # this User object. Returns true or false
+  def followers?(user_id)
+    user = User.find_by(id: user_id)
+    self.followers.include?(user) ? true : false
+  end
 end
