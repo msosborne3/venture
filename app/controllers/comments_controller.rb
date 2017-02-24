@@ -8,8 +8,15 @@ def create
   if @comment.save
     redirect_to :back
   else
-    render root_path
+    redirect_to entry_path(@entry)
   end
+end
+
+def destroy
+  @comment = @entry.comments.find(params[:id])
+  
+  @comment.destroy
+  redirect_to entry_path(@entry)
 end
 
 private
