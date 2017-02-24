@@ -5,14 +5,14 @@
 <% else %>
   <h2><%= @user.first_name %> <%= @user.last_name %></h2>
   <% if current_user.following?(@user.id) %>
-    <%= link_to "Unfollow", unfollow_user_path, method: :post %>
+    <%= link_to "Unfollow", unfollow_user_path, method: :post %><br>
   <% else %>
-    <%= link_to "Follow", follow_user_path, method: :post %>
+    <%= link_to "Follow", follow_user_path, method: :post %><br>
   <% end %>
 <% end %>
 
-<ul>
+<div class="row">
   <% @user.entries.each do |entry| %>
     <%= render partial: 'entries/entry', locals: {entry: entry} %>
   <% end %>
-</ul>
+</div>
