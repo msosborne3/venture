@@ -4,22 +4,29 @@
 
 <p><%= @entry.content %></p>
 
+<!-- if the current user owns the journal entry, they are shown
+    links to edit or delete the entry. -->
 <% if @entry.user == current_user %>
   <%= link_to "Edit Journal Entry", edit_entry_path(@entry), class: "btn btn-default" %>
   <%= link_to 'Delete Journal Entry', entry_path(@entry),
               data: {:confirm => 'Are you sure?'}, :method => :delete, class: "btn btn-default" %>
 <% end %>
 
+
 <h4>Comments:</h4>
+  <!-- If there are comments on the entry, they are displayed -->
 <% if @entry.comments.length > 0 %>
   <% @entry.comments.each do |comment| %>
     <%= render partial: 'comments/comment', locals: {comment: comment} %>
   <% end %>
+  <!-- Otherwise, a message is displayed saying that there are
+      no comments yet.-->
 <% else %>
   <p>There are no comments yet.</p>
 <% end %>
 
 <div class="comment-form">
+  <!-- If the user is signed in then they can add a new comment-->
   <% if current_user %>
     <%= form_for [@entry, @entry.comments.new] do |f| %>
       <%= f.text_field :content, placeholder: 'Add a comment...' %>
