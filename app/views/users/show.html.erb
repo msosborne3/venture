@@ -11,10 +11,13 @@
   <% end %>
 <% end %>
 
-<h2><%= @user.first_name %> <%= @user.last_name %></h2>
-<%= image_tag @user.profile_picture.url(:thumb) %>
-
-<p><%= @user.following.length %> following <%= @user.followers.length %> followers</p><br>
+<div class="profile-heading">
+  <div class="info">
+    <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+    <p><%= @user.following.length %> following <%= @user.followers.length %> followers</p><br>
+  </div>
+  <%= image_tag @user.profile_picture.url(:medium), class: 'profile-img img-circle' %>
+</div>
 
 <div class="row">
   <% @user.entries.each do |entry| %>

@@ -27,3 +27,39 @@
  a:hover {
   color: #ffdd15;
  }
+
+ .img-circle {
+    border-radius: 50%;
+}
+
+.pic {
+  display: inline-block;
+  float: left;
+  margin: 5px;
+}
+
+.content {
+  display: inline-block;
+  margin: 15px 0px 0px 10px;
+}
+
+.entry {
+  border: 1px solid;
+  border-radius: 15px;
+  overflow: auto;
+  margin-bottom: 20px;
+}
+
+.profile-heading {
+  overflow: auto;
+  margin-bottom: 25px;
+}
+
+.info {
+  display: inline-block;
+}
+
+.profile-img {
+  display: inline-block;
+  float: right;
+}
