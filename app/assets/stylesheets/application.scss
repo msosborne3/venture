@@ -15,3 +15,15 @@
  *= require_tree .
  *= require_self
  */
+
+ .btn-default:hover {
+  background-color: #ffdd15;
+ }
+
+ a {
+  color: black;
+ }
+
+ a:hover {
+  color: #ffdd15;
+ }
