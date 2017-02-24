@@ -1,7 +1,7 @@
 <h1>Journal Entries</h1>
 
 <div class="row">
-  <% @following_entries.each do |entry| %>
+  <% @entries.each do |entry| %>
     <%= render partial: 'entries/entry', locals: {entry: entry} %>
   <% end %>
 </div>

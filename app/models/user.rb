@@ -13,7 +13,7 @@ class User < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
-  has_attached_file :profile_picture
+  has_attached_file :profile_picture, default_url: ':style/default.png', styles: { thumb: "100x100>" }
   validates_attachment_content_type :profile_picture, content_type: /\Aimage\/.*\z/
 
   # Follows a user by setting the following_id to the given user

@@ -1,4 +1,5 @@
 <div class="col-md-12">
+  <% image_tag entry.user.profile_picture.url(:thumb) %>
   Author: <%= link_to entry.user.full_name, user_path(entry.user) %><br>
   <%= link_to entry.title, entry_path(entry) %><br>
   <%= truncate(entry.content) %><br>
