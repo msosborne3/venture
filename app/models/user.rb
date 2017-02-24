@@ -4,12 +4,14 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :entries
+  has_many :entries, dependent: :destroy
   has_many :follower_relationships, foreign_key: :following_id, class_name: 'FollowRelationship'
   has_many :followers, through: :follower_relationships, source: :follower
 
   has_many :following_relationships, foreign_key: :follower_id, class_name: 'FollowRelationship'
   has_many :following, through: :following_relationships, source: :following
+
+  has_many :comments, dependent: :destroy
 
   # Follows a user by setting the following_id to the given user
   # and the follower_id to the id of this User object
