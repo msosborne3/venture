@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
+  before_action :owned_entry, only: [:edit, :update, :destroy]  
 
   # list all of a users entries
   def index
@@ -46,11 +47,22 @@ class EntriesController < ApplicationController
   end
 
   private
+  # Finds the specific entry
   def set_entry
     @entry = Entry.find_by(id: params[:id])
   end
 
+  # strong params for entry
   def entry_params
     params.require(:entry).permit(:title, :content)
   end
+
+  # checks if a user owns an entry to ensure that a user can't edit
+  # other user's entries
+  def owned_entry  
+    unless current_user == @entry.user
+      flash[:alert] = "That entry doesn't belong to you!"
+      redirect_to root_path
+    end
+  end  
 end
