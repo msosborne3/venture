@@ -13,6 +13,9 @@ class User < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
+  has_attached_file :profile_picture
+  validates_attachment_content_type :profile_picture, content_type: /\Aimage\/.*\z/
+
   # Follows a user by setting the following_id to the given user
   # and the follower_id to the id of this User object
   def follow(user_id)  
