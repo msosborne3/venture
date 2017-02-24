@@ -1,0 +1,9 @@
+<%= render 'profile_heading' %>
+
+<% if @followers.length > 0 %>
+  <% @followers.each do |user| %>
+    <%= user.full_name %>
+  <% end %>
+<% else %>
+  <p><%= @user.first_name %> has no followers yet.</p>
+<% end %>
