@@ -12,7 +12,7 @@
 
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
-          <li> <%= link_to "Home", root_path %> </li>
+          <li> <a href="/"><%= image_tag "Venture-logo.png", class: "logo" %></a> </li>
         </ul>
         
         <%= form_tag(users_path, :method => "get", id: "search-form", class: 'navbar-form navbar-left') do %>

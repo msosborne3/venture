@@ -16,6 +16,12 @@
  *= require_self
  */
 
+ .logo {
+  height: 45px;
+  margin-top: -10px;
+  margin-bottom: -10px;
+ }
+
  .btn-default:hover {
   background-color: #ffdd15;
  }
@@ -67,9 +73,24 @@
 
 .info {
   display: inline-block;
+  float: left;
+}
+
+.profile-links {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 30px;
 }
 
 .profile-img {
   display: inline-block;
   float: right;
+}
+
+.pic-thumbnail {
+  margin-right: 20px;
+}
+
+.name-thumbnail {
+  font-size: 18px;
 }

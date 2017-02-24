@@ -16,8 +16,10 @@
         they have the option of creating a new journal entry
         or editing their own profile. -->
     <% if @user == current_user %>
-      <%= link_to "New Journal Entry", new_entry_path, class: "btn btn-default" %>
-      <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-default" %>
+      <div class="profile-links">
+        <%= link_to "New Journal Entry", new_entry_path, class: "btn btn-default" %>
+        <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-default" %>
+      </div>
 
       <!-- Otherwise, they are given options to follow or unfollow
           the user. -->
@@ -27,9 +29,13 @@
           whether or not the current user is already following the
           displayed user -->
       <% if current_user.following?(@user.id) %>
-        <%= link_to "Unfollow", unfollow_user_path, method: :post, class: "btn btn-default" %><br>
+        <div class="profile-links">
+          <%= link_to "Unfollow", unfollow_user_path, method: :post, class: "btn btn-default" %><br>
+        </div>
       <% else %>
-        <%= link_to "Follow", follow_user_path, method: :post, class: "btn btn-default" %><br>
+        <div class="profile-links">
+          <%= link_to "Follow", follow_user_path, method: :post, class: "btn btn-default" %><br>
+        </div>
       <% end %> <!-- ends if current_user.following?(@user.id) -->
     <% end %> <!-- ends if @user = current_user -->
   <% end %> <!-- ends if current_user -->
