@@ -22,9 +22,9 @@
       <%= link_to "Unfollow", unfollow_user_path, method: :post, class: "btn btn-default" %><br>
     <% else %>
       <%= link_to "Follow", follow_user_path, method: :post, class: "btn btn-default" %><br>
-    <% end %>
-  <% end %>
-<% end %>
+    <% end %> <!-- ends if current_user.following?(@user.id) -->
+  <% end %> <!-- ends if @user = current_user -->
+<% end %> <!-- ends if current_user -->
 
 <!-- Display the user's name, followers, and profile picture -->
 <div class="profile-heading">
