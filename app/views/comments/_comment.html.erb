@@ -1,0 +1,7 @@
+<div class="comment">
+  <%= comment.user.full_name %>:
+  <%= comment.content %>
+  <% if comment.user == current_user %>
+    <%= link_to "Delete", entry_comment_path(@entry, comment), method: :delete, data: { confirm: "Are you sure?" } %>
+  <% end %>
+</div>
