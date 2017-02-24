@@ -1,9 +1,18 @@
 <%= render 'profile_heading' %>
 
 <% if @following.length > 0 %>
-  <% @following.each do |user| %>
-    <%= user.full_name %>
-  <% end %>
+  <div class="row">
+    <% @following.each do |user| %>
+      <div class="col-md-4">
+        <div class="profile-card">
+          <%= image_tag user.profile_picture.url(:thumb), class: 'img-circle' %>
+          <%= link_to user.full_name, user_path(user) %>
+        </div>
+      </div>
+    <% end %>
+  </div>
 <% else %>
+
   <p><%= @user.first_name %> has no followers yet.</p>
+
 <% end %>
