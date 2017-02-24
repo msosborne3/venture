@@ -1,7 +1,7 @@
 <% if @user == current_user %>
   <h2>Welcome, <%= current_user.first_name %></h2>
   <%= link_to "New Journal Entry", new_entry_path, class: "btn btn-default" %>
-  <%= link_to "Edit Profile", edit_user_path, class: "btn btn-default" %>
+  <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-default" %>
 <% else %>
   <h2><%= @user.first_name %> <%= @user.last_name %></h2>
   <% if current_user.following?(@user.id) %>
