@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   post '/users/:id/unfollow_user', to: 'relationships#unfollow_user', as: :unfollow_user
   get '/users/:id/following', to: 'users#following', as: :following
   get '/users/:id/followers', to: 'users#followers', as: :followers
-
+  get '/users/:id/journal', to: 'users#journal', as: :journal
+  get '/users/:id/place_list', to: 'users#places', as: :place_list
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
