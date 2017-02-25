@@ -1,13 +1,4 @@
 Rails.application.routes.draw do
-  get 'places/new'
-
-  get 'places/create'
-
-  get 'places/edit'
-
-  get 'places/update'
-
-  get 'places/destroy'
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   root 'welcome#home'
@@ -16,6 +7,7 @@ Rails.application.routes.draw do
     resources :comments
   end
   resources :users
+  resources :places
 
   post '/users/:id/follow_user', to: 'relationships#follow_user', as: :follow_user
   post '/users/:id/unfollow_user', to: 'relationships#unfollow_user', as: :unfollow_user
