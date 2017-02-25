@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
 
   # list all entries
   def index
-    @entries = Entry.all
+    @entries = Entry.of_followed_users(current_user.following).order('created_at DESC')
   end
 
   # show a specific entry

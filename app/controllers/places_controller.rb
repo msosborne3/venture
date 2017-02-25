@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
 
   # list all of a user's places
   def index
-    @places = Place.all.order("created_at asc")
+    @places = Place.of_followed_users(current_user.following).order('created_at DESC')
   end
 
   # show a specific place
