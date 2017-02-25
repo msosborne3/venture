@@ -17,8 +17,8 @@
         or editing their own profile. -->
     <% if @user == current_user %>
       <div class="profile-links">
-        <%= link_to "New Journal Entry", new_entry_path, class: "btn btn-default" %>
-        <%= link_to "New Place", new_place_path, class: 'btn btn-default' %>
+        <%= link_to "Places", user_path(@user), class: "btn btn-default" %>
+        <%= link_to "Journal", journal_path, class: 'btn btn-default' %>
         <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-default" %>
       </div>
 

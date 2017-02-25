@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   
   # Displays a user's profile page
   def show
+    @places = @user.places.order("created_at asc")
   end
 
   def following
@@ -23,11 +24,7 @@ class UsersController < ApplicationController
   end
 
   def journal
-    @user.entries.order("created_at desc")
-  end
-
-  def places
-    @user.places.order("created_at desc")
+    @entries = @user.entries.order("created_at desc")
   end
 
   private
