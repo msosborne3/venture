@@ -1,3 +1,5 @@
+<%= render partial: 'users/profile_heading', locals: {user: @place.user} %>
+
 <h2 class="heading"><%= @place.name %></h2>
 
 <% if current_user == @place.user %>
