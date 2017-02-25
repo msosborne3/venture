@@ -6,7 +6,7 @@
     <div class="content">
       Author: <%= link_to entry.user.full_name, user_path(entry.user) %><br>
       <strong><%= link_to entry.title, entry_path(entry) %></strong><br>
-      <%= truncate(entry.content) %><br>
+      <%= truncate(entry.content, length: 150) %><br>
     </div>
     <br>
   </div>

@@ -8,4 +8,9 @@ class Post < ApplicationRecord
     place = self.place
     place.user
   end
+
+  # Finds post where search term matches description or link
+  def self.search(search)
+  where("description LIKE ? OR link LIKE ?", "%#{search}%", "%#{search}%") 
+  end
 end

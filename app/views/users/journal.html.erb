@@ -2,9 +2,17 @@
 
 <h2 class="heading">Journal</h2>
 
-  <!-- Renders the entry partial to display the list of
-      the current user's journal entries. -->
-  <% @user.entries.each do |entry| %>
-    <%= render partial: 'entries/entry', locals: {entry: entry} %>
+<div class="heading">
+  <%= link_to "New Journal Entry", new_entry_path, class: 'btn btn-default' %>
+</div>
+
+  <% if @user.entries.length > 0 %>
+    <!-- Renders the entry partial to display the list of
+        the current user's journal entries. -->
+    <% @user.entries.each do |entry| %>
+      <%= render partial: 'entries/entry', locals: {entry: entry} %>
+    <% end %>
+  <% else %>
+    <p class="message">There are no entries yet.
   <% end %>
 </div>

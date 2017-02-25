@@ -9,4 +9,9 @@ class Entry < ApplicationRecord
     User.find(self.user_id)
   end
 
+  # Finds entry where search term matches title
+  def self.search(search)
+  where("title LIKE ?", "%#{search}%") 
+  end
+
 end

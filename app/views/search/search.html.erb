@@ -1,0 +1,43 @@
+<div class="search-links">
+  <a href="#people" class='btn btn-default'>People</a>
+  <a href="#posts" class='btn btn-default'>Posts</a>
+  <a href="#entries" class='btn btn-default'>Entries</a>
+  <a href="#places" class='btn btn-default'>Places</a>
+</div>
+
+<a name="people"></a>
+<h2 class="heading" id="people">People</h2>
+
+<%= render partial: 'users/user', locals: {array: @users, message: "No matches were found."} %>
+
+
+<a name="posts"></a>
+<h2 class="heading" id="posts">Posts</h2>
+<%= render partial: 'posts/post', locals: {array: @posts, message: "No matches were found"} %>
+
+<a name="entries"></a>
+<h2 class="heading" id="entries">Entries</h2>
+<% if @entries.length > 0 %>
+  <% @entries.each do |entry| %>
+    <%= render partial: 'entries/entry', locals: {entry: entry} %>
+  <% end %>
+<% else %>
+  <p class="message">No matches were found.</p>
+<% end %>
+
+<a name="places"></a>
+<h2 class="heading" id="places">Places</h2>
+
+<% if @places.length > 0 %>
+  <div class="row">
+    <% @places.each do |place| %>
+      <div class="col-sm-3">
+        <div class="places">
+          <%= link_to place.name, place_path(place), class: 'name-thumbnail place-name' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% else %>
+  <p class="message">No matches were found.</p>
+<% end %>

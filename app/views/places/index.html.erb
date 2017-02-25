@@ -4,13 +4,6 @@
 
 <% if @places.length > 0 %>
   <div class="row">
-
-    <div class="col-sm-3">
-      <div class="places">
-        <a class="name-thumbnail place-name glyphicon glyphicon-plus add-new-place" href="<%= new_place_path %>"></a>
-      </div>
-    </div>
-
     <% @places.each do |place| %>
       <div class="col-sm-3">
         <div class="places">
@@ -20,5 +13,5 @@
     <% end %>
   </div>
 <% else %>
-  <p>There are no places yet.</p>
+  <p class="message">There are no places yet.</p>
 <% end %>

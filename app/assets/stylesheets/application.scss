@@ -64,7 +64,8 @@
   border: 1px solid;
   border-radius: 15px;
   overflow: auto;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 .profile-heading {
@@ -90,6 +91,10 @@
 
 .pic-thumbnail {
   margin-right: 20px;
+}
+
+.profile-card {
+  margin-top: 20px;
 }
 
 .name-thumbnail {
@@ -119,7 +124,7 @@
 }
 
 .post-card {
-  width: 250px;
+  width: 260px;
   overflow: auto;
   text-align: center;
   padding: 10px;
@@ -140,4 +145,15 @@
   margin-top: 5px;
   display: inline-block;
   text-align: left;
+}
+
+.search-links {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.message {
+  text-align: center;
+  font-size: 18px;
 }
