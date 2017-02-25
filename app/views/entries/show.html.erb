@@ -1,3 +1,5 @@
+<!-- Journal Entry show page displays information about the journal entry including the title, author, date it was written, and the journal content. -->
+
 <h2><%= @entry.title %></h2>
 <h4>Created By: <%= @entry.user.first_name %> <%= @entry.user.last_name %></h4>
 <h4><%= to_date(@entry.created_at) %></h4>
