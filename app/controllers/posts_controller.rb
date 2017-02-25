@@ -58,7 +58,7 @@ class PostsController < ApplicationController
   end
 
   def post_params
-    params.require(:post).permit(:link, :description)
+    params.require(:post).permit(:link, :description, :post_photo)
   end
 
   def owned_post  
