@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
 
   # list all of a user's places
   def index
-    @places = current_user.places
+    @places = Place.all
   end
 
   # show a specific place

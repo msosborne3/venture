@@ -2,9 +2,9 @@ class EntriesController < ApplicationController
   before_action :set_entry, only: [:show, :edit, :update, :destroy]
   before_action :owned_entry, only: [:edit, :update, :destroy]  
 
-  # list all of a users entries
+  # list all entries
   def index
-    @entries = current_user.entries
+    @entries = Entry.all
   end
 
   # show a specific entry
