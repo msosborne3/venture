@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
-  root 'welcome#home'
+  root 'places#index'
 
   resources :entries do
     resources :comments

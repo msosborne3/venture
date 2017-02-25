@@ -2,4 +2,8 @@
 :User:
   :profile_picture:
   - :medium
+  - :small
   - :thumb
+:Post:
+  :post_photo:
+  - :medium

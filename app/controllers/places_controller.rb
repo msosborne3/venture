@@ -4,7 +4,7 @@ class PlacesController < ApplicationController
 
   # list all of a user's places
   def index
-    @places = Place.all
+    @places = Place.all.order("created_at asc")
   end
 
   # show a specific place
