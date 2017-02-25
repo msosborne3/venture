@@ -1,4 +1,4 @@
-<h2><%= current_user.first_name %>'s Journal Entries</h2>
+<h2>Journal Entries</h2>
 
 <% @entries.each do |entry| %>
   <%= render partial: 'entry', locals: {entry: entry} %>
