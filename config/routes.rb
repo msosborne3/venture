@@ -1,4 +1,14 @@
 Rails.application.routes.draw do
+  get 'places/new'
+
+  get 'places/create'
+
+  get 'places/edit'
+
+  get 'places/update'
+
+  get 'places/destroy'
+
   devise_for :users, :controllers => { registrations: 'registrations' }
   root 'welcome#home'
 
