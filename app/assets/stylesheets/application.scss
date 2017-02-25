@@ -157,3 +157,25 @@
   text-align: center;
   font-size: 18px;
 }
+
+.comments {
+  text-align: center;
+}
+.comment {
+  text-align: left;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.journal-entry {
+  text-align: center;
+  margin-bottom: 30px;
+  border: 1px solid lightgrey;
+  border-radius: 25px;
+}
+
+.entry-content {
+  font-size: 16px;
+  text-align: left;
+  padding: 10px 35px 20px 35px;
+}

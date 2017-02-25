@@ -36643,3 +36643,667 @@ Processing by EntriesController#show as HTML
 Completed 200 OK in 82ms (Views: 77.2ms | ActiveRecord: 1.1ms)
 
 
+Started GET "/entries/4" for ::1 at 2017-02-25 15:19:34 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 4]]
+  Rendered entries/show.html.erb within layouts/application (65.7ms)
+  Rendered layouts/_header.html.erb (2.9ms)
+Completed 200 OK in 468ms (Views: 440.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/entries/4" for ::1 at 2017-02-25 15:19:44 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 4]]
+  Rendered entries/show.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 83ms (Views: 79.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/entries/4" for ::1 at 2017-02-25 15:20:18 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 4]]
+  Rendered entries/show.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 59ms (Views: 56.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/4" for ::1 at 2017-02-25 15:21:11 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 4]]
+  Rendered entries/show.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/entries/4" for ::1 at 2017-02-25 15:21:25 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 4]]
+  Rendered entries/show.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 56ms (Views: 52.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/4" for ::1 at 2017-02-25 15:21:52 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 4]]
+  Rendered entries/show.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 55ms (Views: 52.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/entries/4" for ::1 at 2017-02-25 15:22:30 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 4]]
+  Rendered entries/show.html.erb within layouts/application (6.8ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 58ms (Views: 55.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/4" for ::1 at 2017-02-25 15:23:38 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 4]]
+  Rendered entries/show.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 1478ms (Views: 1476.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/entries/4" for ::1 at 2017-02-25 15:23:55 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 4]]
+  Rendered entries/show.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 1437ms (Views: 1433.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/2" for ::1 at 2017-02-25 15:23:59 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."follower_id" WHERE "follow_relationships"."following_id" = ?[0m  [["following_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered users/_profile_heading.html.erb (27.3ms)
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places" WHERE "places"."user_id" = ? ORDER BY created_at asc[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (34.7ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 91ms (Views: 78.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/2/journal" for ::1 at 2017-02-25 15:24:01 -0600
+Processing by UsersController#journal as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/journal.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."follower_id" WHERE "follow_relationships"."following_id" = ?[0m  [["following_id", 2]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered users/_profile_heading.html.erb (7.5ms)
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/journal.html.erb within layouts/application (11.6ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 68ms (Views: 61.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/2" for ::1 at 2017-02-25 15:24:02 -0600
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?[0m  [["follower_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."follower_id" WHERE "follow_relationships"."following_id" = ?[0m  [["following_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered users/_profile_heading.html.erb (7.6ms)
+  [1m[36mPlace Load (0.1ms)[0m  [1m[34mSELECT "places".* FROM "places" WHERE "places"."user_id" = ? ORDER BY created_at asc[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 75ms (Views: 69.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-02-25 15:24:03 -0600
+Processing by PlacesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered layouts/_home_header.html.erb (0.5ms)
+  [1m[36mPlace Load (0.4ms)[0m  [1m[34mSELECT "places".* FROM "places" WHERE "places"."user_id" IN (SELECT "users"."id" FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?) ORDER BY created_at DESC[0m  [["follower_id", 2]]
+  Rendered places/index.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 61ms (Views: 54.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/entries" for ::1 at 2017-02-25 15:24:05 -0600
+Processing by EntriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering entries/index.html.erb within layouts/application
+  Rendered layouts/_home_header.html.erb (0.7ms)
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" IN (SELECT "users"."id" FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?) ORDER BY created_at DESC[0m  [["follower_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (2.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (2.7ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.4ms)
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.8ms)
+  Rendered entries/index.html.erb within layouts/application (21.1ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 74ms (Views: 68.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:24:10 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  Rendered entries/show.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 61ms (Views: 57.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/entries/13/comments" for ::1 at 2017-02-25 15:24:20 -0600
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7q2IVY3V2ZtYjwNLatglJvK3WADop0kZ00eKZLBFLYstUi4ulDYGndNYob+U1muchkKp9UGbVBz8YNXBfpgPJw==", "comment"=>{"content"=>"Great Post!"}, "commit"=>"Create Comment", "entry_id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "entry_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["entry_id", 13], ["content", "Great Post!"], ["created_at", 2017-02-25 21:24:20 UTC], ["updated_at", 2017-02-25 21:24:20 UTC]]
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /Users/morganosborne/Development/code/venture/app/controllers/comments_controller.rb:9)
+Redirected to http://localhost:3000/entries/13
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:24:20 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.6ms)
+  Rendered entries/show.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 64ms (Views: 60.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-02-25 15:24:27 -0600
+Processing by PlacesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered layouts/_home_header.html.erb (0.7ms)
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT "places".* FROM "places" WHERE "places"."user_id" IN (SELECT "users"."id" FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?) ORDER BY created_at DESC[0m  [["follower_id", 2]]
+  Rendered places/index.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_header.html.erb (2.6ms)
+Completed 200 OK in 66ms (Views: 60.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/entries" for ::1 at 2017-02-25 15:24:28 -0600
+Processing by EntriesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering entries/index.html.erb within layouts/application
+  Rendered layouts/_home_header.html.erb (0.7ms)
+  [1m[36mEntry Load (0.3ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" IN (SELECT "users"."id" FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?) ORDER BY created_at DESC[0m  [["follower_id", 2]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.2ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.7ms)
+  Rendered entries/index.html.erb within layouts/application (18.0ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 69ms (Views: 63.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/entries/3" for ::1 at 2017-02-25 15:24:30 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 3]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.4ms)
+  Rendered entries/show.html.erb within layouts/application (20.8ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 90ms (Views: 86.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/" for ::1 at 2017-02-25 15:24:32 -0600
+Processing by PlacesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered layouts/_home_header.html.erb (1.1ms)
+  [1m[36mPlace Load (0.3ms)[0m  [1m[34mSELECT "places".* FROM "places" WHERE "places"."user_id" IN (SELECT "users"."id" FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?) ORDER BY created_at DESC[0m  [["follower_id", 2]]
+  Rendered places/index.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 89ms (Views: 80.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries" for ::1 at 2017-02-25 15:24:33 -0600
+Processing by EntriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering entries/index.html.erb within layouts/application
+  Rendered layouts/_home_header.html.erb (1.3ms)
+  [1m[36mEntry Load (0.3ms)[0m  [1m[34mSELECT "entries".* FROM "entries" WHERE "entries"."user_id" IN (SELECT "users"."id" FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?) ORDER BY created_at DESC[0m  [["follower_id", 2]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (4.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (4.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (2.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (2.0ms)
+  Rendered entries/index.html.erb within layouts/application (29.0ms)
+  Rendered layouts/_header.html.erb (3.0ms)
+Completed 200 OK in 111ms (Views: 102.7ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:24:35 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.2ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.9ms)
+  Rendered entries/show.html.erb within layouts/application (13.7ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 79ms (Views: 75.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:25:06 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.6ms)
+  Rendered entries/show.html.erb within layouts/application (11.2ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 1526ms (Views: 1523.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:25:11 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.5ms)
+  Rendered entries/show.html.erb within layouts/application (9.7ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 57ms (Views: 54.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:25:22 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.9ms)
+  Rendered entries/show.html.erb within layouts/application (8.7ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 1530ms (Views: 1526.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:25:30 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.5ms)
+  Rendered entries/show.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 1374ms (Views: 1370.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:25:45 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.8ms)
+  Rendered entries/show.html.erb within layouts/application (9.6ms)
+  Rendered layouts/_header.html.erb (2.3ms)
+Completed 200 OK in 1553ms (Views: 1550.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/entries/13/comments" for ::1 at 2017-02-25 15:25:55 -0600
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mSC/uWDHWKekEO+pgakggUaJ3mDaR69d2HuBoi1FyTpmxx8coIWO40+0nVXcC7TDgfTf8UN1IcQHJKIYKmqnpA==", "comment"=>{"content"=>"Seriously! It was amaaaazing!"}, "commit"=>"Create Comment", "entry_id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("user_id", "entry_id", "content", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["user_id", 2], ["entry_id", 13], ["content", "Seriously! It was amaaaazing!"], ["created_at", 2017-02-25 21:25:55 UTC], ["updated_at", 2017-02-25 21:25:55 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `redirect_to :back` is deprecated and will be removed from Rails 5.1. Please use `redirect_back(fallback_location: fallback_location)` where `fallback_location` represents the location to use if the request has no HTTP referer information. (called from create at /Users/morganosborne/Development/code/venture/app/controllers/comments_controller.rb:9)
+Redirected to http://localhost:3000/entries/13
+Completed 302 Found in 9ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:25:55 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.3ms)
+  Rendered entries/show.html.erb within layouts/application (11.9ms)
+  Rendered layouts/_header.html.erb (2.2ms)
+Completed 200 OK in 66ms (Views: 63.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:27:22 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.3ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.2ms)
+  Rendered entries/show.html.erb within layouts/application (12.7ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 1490ms (Views: 1486.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:27:42 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.6ms)
+  Rendered entries/show.html.erb within layouts/application (14.3ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 1444ms (Views: 1440.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:27:50 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.1ms)
+  Rendered entries/show.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 1570ms (Views: 1566.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:28:56 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.3ms)
+  Rendered entries/show.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 1527ms (Views: 1524.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:29:25 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.3ms)
+  Rendered entries/show.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 1527ms (Views: 1524.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:29:48 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.8ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.3ms)
+  Rendered entries/show.html.erb within layouts/application (10.8ms)
+  Rendered layouts/_header.html.erb (2.5ms)
+Completed 200 OK in 1409ms (Views: 1406.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:30:26 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (0.9ms)
+  Rendered entries/show.html.erb within layouts/application (12.1ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 1507ms (Views: 1504.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:30:48 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.6ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.2ms)
+  Rendered entries/show.html.erb within layouts/application (10.6ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 1407ms (Views: 1403.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:31:10 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.5ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.0ms)
+  Rendered entries/show.html.erb within layouts/application (12.3ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+Completed 200 OK in 1516ms (Views: 1513.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:31:36 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.9ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.0ms)
+  Rendered entries/show.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 1429ms (Views: 1426.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:31:51 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.1ms)
+  Rendered entries/show.html.erb within layouts/application (13.3ms)
+  Rendered layouts/_header.html.erb (1.6ms)
+Completed 200 OK in 1504ms (Views: 1501.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:32:03 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (2.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (0.9ms)
+  Rendered entries/show.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_header.html.erb (2.4ms)
+Completed 200 OK in 1449ms (Views: 1446.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/entries/13" for ::1 at 2017-02-25 15:32:11 -0600
+Processing by EntriesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mEntry Load (0.1ms)[0m  [1m[34mSELECT  "entries".* FROM "entries" WHERE "entries"."id" = ? LIMIT ?[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering entries/show.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."entry_id" = ?[0m  [["entry_id", 13]]
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (3.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendered comments/_comment.html.erb (1.4ms)
+  Rendered entries/show.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 1538ms (Views: 1535.7ms | ActiveRecord: 0.5ms)
+
+

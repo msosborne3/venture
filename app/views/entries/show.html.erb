@@ -1,38 +1,44 @@
 <!-- Journal Entry show page displays information about the journal entry including the title, author, date it was written, and the journal content. -->
 
-<h2><%= @entry.title %></h2>
-<h4>Created By: <%= @entry.user.first_name %> <%= @entry.user.last_name %></h4>
-<h4><%= to_date(@entry.created_at) %></h4>
+<h2 class="heading"><%= @entry.title %></h2>
 
-<p><%= @entry.content %></p>
+<div class="journal-entry">
+  <h4>Created By: <%= @entry.user.first_name %> <%= @entry.user.last_name %></h4>
+  <h4><%= to_date(@entry.created_at) %></h4>
 
-<!-- if the current user owns the journal entry, they are shown
-    links to edit or delete the entry. -->
-<% if @entry.user == current_user %>
-  <%= link_to "Edit Journal Entry", edit_entry_path(@entry), class: "btn btn-default" %>
-  <%= link_to 'Delete Journal Entry', entry_path(@entry),
-              data: {:confirm => 'Are you sure?'}, :method => :delete, class: "btn btn-default" %>
-<% end %>
+  <p class="entry-content"><%= @entry.content %></p>
 
-
-<h4>Comments:</h4>
-  <!-- If there are comments on the entry, they are displayed -->
-<% if @entry.comments.length > 0 %>
-  <% @entry.comments.each do |comment| %>
-    <%= render partial: 'comments/comment', locals: {comment: comment} %>
+  <!-- if the current user owns the journal entry, they are shown
+      links to edit or delete the entry. -->
+  <% if @entry.user == current_user %>
+    <%= link_to "Edit Journal Entry", edit_entry_path(@entry), class: "btn btn-default" %>
+    <%= link_to 'Delete Journal Entry', entry_path(@entry),
+                data: {:confirm => 'Are you sure?'}, :method => :delete, class: "btn btn-default" %>
   <% end %>
-  <!-- Otherwise, a message is displayed saying that there are
-      no comments yet.-->
-<% else %>
-  <p>There are no comments yet.</p>
-<% end %>
+</div>
 
-<div class="comment-form">
-  <!-- If the user is signed in then they can add a new comment-->
-  <% if current_user %>
-    <%= form_for [@entry, @entry.comments.new] do |f| %>
-      <%= f.text_field :content, placeholder: 'Add a comment...' %>
-      <%= f.submit %>
+<div class="comments">
+  <h4 class="heading">Comments:</h4>
+    <!-- If there are comments on the entry, they are displayed -->
+  <% if @entry.comments.length > 0 %>
+    <% @entry.comments.each do |comment| %>
+      <%= render partial: 'comments/comment', locals: {comment: comment} %>
     <% end %>
+    <!-- Otherwise, a message is displayed saying that there are
+        no comments yet.-->
+  <% else %>
+    <p>There are no comments yet.</p>
   <% end %>
+
+  <div class="comment-form">
+    <!-- If the user is signed in then they can add a new comment-->
+    <% if current_user %>
+      <%= form_for [@entry, @entry.comments.new] do |f| %>
+        <div class="form-group">
+          <%= f.text_field :content, placeholder: 'Add a comment...', class: 'form-control' %>
+        </div>
+        <%= f.submit class: 'btn btn-default' %>
+      <% end %>
+    <% end %>
+  </div>
 </div>
