@@ -12,6 +12,7 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require posts
  *= require_tree .
  *= require_self
  */
@@ -115,4 +116,28 @@
 .add-new-place {
   margin-top: -9px;
   margin-bottom: -10px;
+}
+
+.post-card {
+  width: 250px;
+  overflow: auto;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.post-card .post-photo {
+  border-radius: 20px;
+}
+
+.post-profile {
+  margin-top: 12px;
+  float: left;
+  display: inline-block;
+}
+
+.post-info {
+  margin-top: 5px;
+  display: inline-block;
+  text-align: left;
 }
