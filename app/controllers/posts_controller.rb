@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
-  before_action :set_place, only: [:index, :create, :destroy]
+  before_action :set_place
   before_action :owned_post, only: [:edit, :update, :destroy]  
 
   # list all posts
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
     @post = Post.new(place_id: @place.id)
     @post.update(post_params)
     if @post.save
-      redirect_to post_path(@post)
+      redirect_to place_post_path(@place, @post)
     else
       redirect_to controller: 'posts', action: 'new'
     end
@@ -35,7 +35,7 @@ class PostsController < ApplicationController
   # updates post
   def update
     if @post.update(post_params)
-      redirect_to post_path(@post)
+      redirect_to place_post_path(@place, @post)
     else
       redirect_to controller: 'posts', action: 'edit'
     end
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   # deletes a post
   def destroy
     @post.destroy
-    redirect_to entries_path
+    redirect_to place_posts_path
   end
 
   private

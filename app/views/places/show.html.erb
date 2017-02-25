@@ -1,1 +1,5 @@
 <h2><%= @place.name %></h2>
+
+<%= link_to "Create New Post", new_place_post_path(@place.id), class: 'btn btn-default' %>
+
+<%= render partial: 'posts/post', locals: {array: @place.posts, message: "#{@place.name} doesn't have any posts yet."} %>
