@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :following, :followers]
+  before_action :set_user, only: [:show, :following, :followers, :journal, :places]
 
   def index
     @users = User.all
@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   
   # Displays a user's profile page
   def show
+    @places = @user.places.order("created_at asc")
   end
 
   def following
@@ -20,6 +21,10 @@ class UsersController < ApplicationController
 
   def followers
     @followers = @user.followers
+  end
+
+  def journal
+    @entries = @user.entries.order("created_at desc")
   end
 
   private
