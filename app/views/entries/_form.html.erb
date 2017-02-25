@@ -1,17 +1,17 @@
 <%= form_for(@entry) do |f| %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :title %><br>
-    <%= f.text_field :title %><br>
+    <%= f.text_field :title, class: 'form-control' %><br>
   </div>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :content %><br>
-    <%= f.text_area :content %><br>
+    <%= f.text_area :content, class: 'form-control', rows: 12 %><br>
   </div>
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'btn btn-default' %>
   </div>
 
 <% end %>
