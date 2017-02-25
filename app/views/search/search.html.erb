@@ -22,7 +22,7 @@
     <%= render partial: 'entries/entry', locals: {entry: entry} %>
   <% end %>
 <% else %>
-  <p>No matches were found.</p>
+  <p class="message">No matches were found.</p>
 <% end %>
 
 <a name="places"></a>
@@ -39,5 +39,5 @@
     <% end %>
   </div>
 <% else %>
-  <p>No matches were found.</p>
+  <p class="message">No matches were found.</p>
 <% end %>
