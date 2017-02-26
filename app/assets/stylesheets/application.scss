@@ -61,7 +61,7 @@
 }
 
 .entry {
-  border: 1px solid;
+  border: 1px solid grey;
   border-radius: 15px;
   overflow: auto;
   margin-bottom: 10px;
@@ -147,7 +147,7 @@
   text-align: left;
 }
 
-.search-links {
+.links {
   text-align: center;
   margin-top: 30px;
   margin-bottom: 30px;
@@ -161,6 +161,7 @@
 .comments {
   text-align: center;
 }
+
 .comment {
   text-align: left;
   font-size: 16px;
@@ -178,4 +179,18 @@
   font-size: 16px;
   text-align: left;
   padding: 10px 35px 20px 35px;
+}
+
+.top-button {
+  border: 1px solid;
+  padding: 30px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 45px;
+  right: 60px;
+  height: 75px;
+}
+
+.post-page {
+  text-align: center;
 }

@@ -1,5 +1,7 @@
 <!-- Journal Entry show page displays information about the journal entry including the title, author, date it was written, and the journal content. -->
 
+<%= render partial: 'users/profile_heading', locals: {user: @entry.user} %>
+
 <h2 class="heading"><%= @entry.title %></h2>
 
 <div class="journal-entry">
