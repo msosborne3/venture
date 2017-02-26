@@ -38,6 +38,8 @@ gem 'bootstrap-sass'
 
 gem 'paperclip'
 
+gem 'omniauth-facebook'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
