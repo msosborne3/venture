@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   # deletes a post
   def destroy
     @post.destroy
-    redirect_to place_posts_path
+    redirect_to root_path
   end
 
   private
@@ -62,7 +62,7 @@ class PostsController < ApplicationController
   end
 
   def owned_post  
-    unless current_user == @post.user
+    unless current_user == @post.post_user
       flash[:alert] = "That post doesn't belong to you!"
       redirect_to root_path
     end

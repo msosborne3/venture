@@ -1,4 +1,5 @@
-<%= form_for [@place, @place.posts.new], html: {multipart: true} do |f| %>
+<!-- Form components for creating new posts and editing posts. Form styled with bootstrap. -->
+<%= form_for [@place, @post] do |f| %>
   <div class="field">
     <%= f.label :post_photo %>
     <%= f.file_field :post_photo %>
@@ -15,4 +16,5 @@
   </div>
 
   <%= f.submit class: 'btn btn-default' %>
+
 <% end %>

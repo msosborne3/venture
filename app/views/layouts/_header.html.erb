@@ -10,11 +10,13 @@
         </button>
       </div>
 
+      <!-- Logo in the navbar links to the homepage -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           <li> <a href="/"><%= image_tag "Venture-logo.png", class: "logo" %></a> </li>
         </ul>
         
+        <!-- Search bar in navigation -->
         <%= form_tag(search_path, :method => "get", id: "search-form", class: 'navbar-form navbar-left') do %>
             <div class="form-group">
               <%= text_field_tag :search, params[:search], placeholder: "Search", class: 'form-control' %>
@@ -22,6 +24,7 @@
             </div>
           <% end %>
 
+        <!-- Navbar: if user is signed in then they see links to their profile and to sign out. If no user is signed in then they see links to sign in or sign up. -->
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
             <li><%= link_to 'Profile', user_path(current_user) %></li>
