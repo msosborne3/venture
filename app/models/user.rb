@@ -4,6 +4,8 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  devise :omniauthable, :omniauth_providers => [:facebook]
+
   has_many :entries, dependent: :destroy
   has_many :follower_relationships, foreign_key: :following_id, class_name: 'FollowRelationship'
   has_many :followers, through: :follower_relationships, source: :follower
@@ -18,6 +20,8 @@ class User < ApplicationRecord
 
   has_attached_file :profile_picture, default_url: ':style/default.png', styles: { :small => "45x45#", :thumb => "80x80#", :medium => "140x140#"}
   validates_attachment_content_type :profile_picture, content_type: /\Aimage\/.*\z/
+
+  attr_reader :profile_picture_remote_url
 
 
   # Follows a user by setting the following_id to the given user
@@ -54,4 +58,17 @@ class User < ApplicationRecord
   def self.search(search)
     where("first_name LIKE ? OR last_name LIKE ? OR email LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%") 
   end
+
+  # Gets information from facebook
+  def self.from_omniauth(auth)
+    where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
+      user.provider = auth.provider
+      user.uid = auth.uid
+      user.first_name = auth.info.first_name
+      user.last_name = auth.info.last_name
+      user.email = auth.info.email
+      user.password = Devise.friendly_token[0,20]
+    end      
+  end
+
 end
