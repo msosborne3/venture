@@ -21,8 +21,6 @@ class User < ApplicationRecord
   has_attached_file :profile_picture, default_url: ':style/default.png', styles: { :small => "45x45#", :thumb => "80x80#", :medium => "140x140#"}
   validates_attachment_content_type :profile_picture, content_type: /\Aimage\/.*\z/
 
-  attr_reader :profile_picture_remote_url
-
 
   # Follows a user by setting the following_id to the given user
   # and the follower_id to the id of this User object
@@ -70,5 +68,4 @@ class User < ApplicationRecord
       user.password = Devise.friendly_token[0,20]
     end      
   end
-
 end
