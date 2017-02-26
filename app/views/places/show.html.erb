@@ -1,12 +1,15 @@
 <%= render partial: 'users/profile_heading', locals: {user: @place.user} %>
 
+<!-- Place show page displays all of the posts belonging to the place. -->
 <h2 class="heading"><%= @place.name %></h2>
 
 <% if current_user == @place.user %>
-  <%= link_to "Create New Post", new_place_post_path(@place.id), class: 'btn btn-default' %>
-  <%= link_to "Edit Place", edit_place_path, class: "btn btn-default" %>
-  <%= link_to 'Delete Place', place_path(@place),
-                data: {:confirm => 'Are you sure?'}, :method => :delete, class: "btn btn-default" %>
+  <div class="links">
+    <%= link_to "Create New Post", new_place_post_path(@place.id), class: 'btn btn-default' %>
+    <%= link_to "Edit Place", edit_place_path, class: "btn btn-default" %>
+    <%= link_to 'Delete Place', place_path(@place),
+                  data: {:confirm => 'Are you sure?'}, :method => :delete, class: "btn btn-default" %>
+  </div>
 <% end %>
 
 <%= render partial: 'posts/post', locals: {array: @place.posts, message: "#{@place.name} doesn't have any posts yet."} %>
