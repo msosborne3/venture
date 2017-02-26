@@ -1,3 +1,3 @@
 # Venture
 
-Venture is a social web application that allows users to share travel stories, recommendations, tips, and photos.
+Venture is a social travel app that allows users to share images and journal entries associated with locations.
