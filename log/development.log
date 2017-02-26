@@ -37307,3 +37307,85 @@ Processing by EntriesController#show as HTML
 Completed 200 OK in 1538ms (Views: 1535.7ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/users" for ::1 at 2017-02-26 11:15:15 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/_user.html.erb (19.2ms)
+  Rendered users/index.html.erb within layouts/application (21.7ms)
+  Rendered layouts/_header.html.erb (13.8ms)
+Completed 200 OK in 506ms (Views: 495.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 11:15:16 -0600
+Processing by PlacesController#index as HTML
+  Rendering places/index.html.erb within layouts/application
+  Rendered layouts/_home_header.html.erb (0.5ms)
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT "places".* FROM "places"[0m
+  Rendered places/index.html.erb within layouts/application (7.9ms)
+  Rendered layouts/_header.html.erb (3.4ms)
+Completed 200 OK in 80ms (Views: 66.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/entries" for ::1 at 2017-02-26 11:16:06 -0600
+Processing by EntriesController#index as HTML
+  Rendering entries/index.html.erb within layouts/application
+  Rendered layouts/_home_header.html.erb (0.6ms)
+  [1m[36mEntry Load (0.3ms)[0m  [1m[34mSELECT "entries".* FROM "entries"[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (16.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.4ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.1ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendered entries/_entry.html.erb (1.1ms)
+  Rendered entries/index.html.erb within layouts/application (46.8ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 95ms (Views: 88.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2017-02-26 11:16:17 -0600
+Processing by Devise::SessionsController#new as HTML
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/shared/_links.html.erb (1.1ms)
+  Rendered users/sessions/new.html.erb within layouts/application (25.7ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 75ms (Views: 72.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2017-02-26 11:16:24 -0600
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vGnMcPHdIU73Q2v2Zm0U9i3UOdoZnXEV4jrgWe1EbIpz5/2Qkf0IgrZXZKTDIej7J+yu6gEc4eee7pyrvWO+Zw==", "user"=>{"email"=>"rory@starshollow.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "rory@starshollow.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = ?, "last_sign_in_at" = ?, "sign_in_count" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["current_sign_in_at", 2017-02-26 17:16:24 UTC], ["last_sign_in_at", 2017-02-25 00:17:51 UTC], ["sign_in_count", 4], ["updated_at", 2017-02-26 17:16:24 UTC], ["id", 4]]
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 167ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for ::1 at 2017-02-26 11:16:24 -0600
+Processing by PlacesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  Rendering places/index.html.erb within layouts/application
+  Rendered layouts/_home_header.html.erb (0.4ms)
+  [1m[36mPlace Load (0.2ms)[0m  [1m[34mSELECT "places".* FROM "places" WHERE "places"."user_id" IN (SELECT "users"."id" FROM "users" INNER JOIN "follow_relationships" ON "users"."id" = "follow_relationships"."following_id" WHERE "follow_relationships"."follower_id" = ?) ORDER BY created_at DESC[0m  [["follower_id", 4]]
+  Rendered places/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 66ms (Views: 44.3ms | ActiveRecord: 0.4ms)
+
+
