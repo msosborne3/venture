@@ -11,6 +11,11 @@ RSpec.describe User, type: :model do
     expect(@user.entries.count).to be(1)
   end
 
+  it "has many places" do
+    @user.places.create
+    expect(@user.places.count).to be(1)
+  end
+
   it "has many follower_relationships" do
     @user.follower_relationships.create
     expect(@user.follower_relationships.length).to eq(1)
