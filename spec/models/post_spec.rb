@@ -29,5 +29,4 @@ RSpec.describe Place, type: :model do
       expect(@post.post_user).to be(@user)
     end
   end
-
 end
