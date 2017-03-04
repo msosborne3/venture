@@ -88,4 +88,47 @@ RSpec.describe User, type: :model do
     end
   end
 
+  # Tests the search class method of User class.
+  describe '#search' do
+
+    # Tests that if no users match the search, no users will be returned
+    it 'does not return any users if none match' do
+      search = User.search('Alice')
+      expect(search.count).to eq(0)
+    end
+
+    # Tests that if a user does match the search, it returns ONLY the users that match
+    it "returns users that match search terms and none that don't" do
+      search = User.search('Rory')
+      expect(search).to include(@user1)
+      expect(search).to_not include(@user2)
+    end
+
+    # Tests that if multiple users match the search, they are all returned
+    it 'can return multiple users if they match' do
+      search = User.search('a')
+      expect(search).to include(@user1)
+      expect(search).to include(@user2)
+    end
+
+    # Tests that the search terms are compared to first name
+    it 'returns user if first name matches the search terms' do
+      search = User.search('Rory')
+      expect(search).to include(@user1)
+    end
+
+    # Tests that search terms are compared to last name
+    it 'returns user if last name matches the search terms' do
+      search = User.search('Gilmore')
+      expect(search).to include(@user1)
+    end
+
+    # Tests that search terms are compared to email
+    it 'returns user if email matches the search terms' do
+      search = User.search('logan@huntzberger.com')
+      expect(search).to include(@user2)
+    end
+
+  end
+
 end
