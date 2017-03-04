@@ -27,64 +27,60 @@ RSpec.describe User, type: :model do
     expect(@user1.following_relationships.length).to eq(1)
   end
 
-  # Tests the follow method of the User model.
-  describe ".follow" do
+  context 'user1 follows user2' do
     before(:each) { @user1.follow(@user2.id) }
 
-    # Tests that when one user follows another, the user.following
-    # array contains the followed user
-    it "follows a user" do
-      expect(@user1.following).to include(@user2)
+    # Tests the follow method of the User model.
+    describe ".follow" do
+
+      # Tests that when one user follows another, the user.following
+      # array contains the followed user
+      it "follows a user" do
+        expect(@user1.following).to include(@user2)
+      end
+
+      # Tests that when one user follows another, the followed 
+      # user.follower array contains the following user
+      it "makes self a follower of the followed user" do
+        expect(@user2.followers).to include(@user1)
+      end 
     end
 
-    # Tests that when one user follows another, the followed 
-    # user.follower array contains the following user
-    it "makes self a follower of the followed user" do
-      expect(@user2.followers).to include(@user1)
-    end 
-  end
+    # Tests the unfollow method of the User model.
+    describe ".unfollow" do
+      before(:each) { @user1.unfollow(@user2.id) }
 
-  # Tests the unfollow method of the User model.
-  describe ".unfollow" do
+      # Tests that when one user unfollows another, the user.following
+      # array no longer contains the unfollowed user
+      it "unfollows a user" do
+        expect(@user1.following).to_not include(@user2)
+      end
 
-    # Tests that when one user unfollows another, the user.following
-    # array no longer contains the unfollowed user
-    it "unfollows a user" do
-      @user1.follow(@user2.id)
-      expect(@user1.following).to include(@user2)
-      @user1.unfollow(@user2.id)
-      expect(@user1.following).to_not include(@user2)
+      # Tests that when one user unfollows another, the followed 
+      # user.follower array no longer contains the unfollowing user
+      it "removes self as a follower of the followed user" do
+        expect(@user2.followers).to_not include(@user1)
+      end 
     end
 
-    # Tests that when one user unfollows another, the followed 
-    # user.follower array no longer contains the unfollowing user
-    it "removes self as a follower of the followed user" do
-      @user1.follow(@user2.id)
-      expect(@user2.followers).to include(@user1)
-      @user1.unfollow(@user2.id)
-      expect(@user2.followers).to_not include(@user1)
-    end 
-  end
+    # Tests the following? method of the User model.
+    describe ".following?" do
 
-  # Tests the following? method of the User model.
-  describe ".following?" do
-
-    # Tests that when one user follows another, the following?
-    # method returns true if user.following contains the followed user
-    it "returns true if a user is following the given user" do
-      @user1.follow(@user2.id)
-      expect(@user1.following?(@user2.id)).to be_truthy
+      # Tests that when one user follows another, the following?
+      # method returns true if user.following contains the followed user
+      it "returns true if a user is following the given user" do
+        expect(@user1).to be_following(@user2.id)
+      end
     end
-  end
 
-  # Tests the followers? method of the User model.
-   describe ".followers?" do
+    # Tests the followers? method of the User model.
+     describe ".followers?" do
 
-    # Tests that when one user follows another, the followers?
-    # method returns true if user.followers contains the following user
-    it "returns true if a user is following the given user" do
-      @user1.follow(@user2.id)
-      expect(@user2.followers?(@user1.id)).to be_truthy
+      # Tests that when one user follows another, the followers?
+      # method returns true if user.followers contains the following user
+      it "returns true if a user is following the given user" do
+        expect(@user2).to be_followers(@user1.id)
+      end
     end
   end
 
