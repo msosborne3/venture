@@ -8,14 +8,9 @@ RSpec.describe Place, type: :model do
     @user.places << @place
   end
 
-  it "belongs to a user" do
-    expect(@place.user_id).to eq(@user.id)
-  end
-
-  it "has many posts" do
-    @place.posts.create
-    expect(@place.posts.length).to eq(1)
-  end
+  it { should belong_to(:user) }
+  
+  it { should have_many(:posts) }
 
   # Tests the search class method of Place class.
   describe '#search' do
