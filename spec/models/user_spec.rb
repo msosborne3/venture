@@ -123,7 +123,6 @@ RSpec.describe User, type: :model do
       search = User.search('logan@huntzberger.com')
       expect(search).to include(@user2)
     end
-
   end
-
+  
 end
