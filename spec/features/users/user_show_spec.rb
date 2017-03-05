@@ -15,13 +15,18 @@ RSpec.feature 'User profile page', :type => :feature do
     expect(current_path).to eq(user_path(user))
   end
 
-  scenario "page displays that user has no places" do
+  scenario "displays that user has no places if none exist" do
     visit user_path(user)
     expect has_content?("no places")
   end
 
+  scenario "lists user's places" do
+    place = FactoryGirl.create(:place, user: user)
+    visit user_path(user)
+    expect has_content?(place.name)
+  end
+
   context 'logged in' do
-    let(:user_2) { FactoryGirl.create(:user) }
 
     before do
       sign_in(user.email, user.password)
@@ -36,9 +41,41 @@ RSpec.feature 'User profile page', :type => :feature do
 
       scenario 'has link to create new place' do
         visit user_path(user)
-        expect has_link?(new_place_path)
+        expect has_link? new_place_path
       end
     end
+
+    context "other user's page" do
+      let(:user_2) { FactoryGirl.create(:user) }
+
+      scenario 'has link to follow user if not following' do
+        visit user_path(user_2)
+        expect has_link? 'Follow'
+      end
+
+      scenario 'does not have unfollow link if user is not following' do
+        visit user_path(user_2)
+        expect has_no_link? 'Unfollow'
+      end
+
+      scenario 'has link to unfollow user if already following' do
+        visit user_path(user_2)
+        click_link 'Follow'
+        expect has_link? 'Unfollow'
+      end
+
+      scenario 'does not have follow link if user is already following' do
+        visit user_path(user_2)
+        click_link 'Follow'
+        expect has_no_link? 'Follow'
+      end
+
+      scenario 'does not have link to add new place' do
+        visit user_path(user_2)
+        expect has_no_link? new_place_path
+      end
+    end
+
   end
 
 end
