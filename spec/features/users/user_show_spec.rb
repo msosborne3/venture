@@ -15,18 +15,30 @@ RSpec.feature 'User profile page', :type => :feature do
     expect(current_path).to eq(user_path(user))
   end
 
+  scenario "page displays that user has no places" do
+    visit user_path(user)
+    expect has_content?("no places")
+  end
+
   context 'logged in' do
+    let(:user_2) { FactoryGirl.create(:user) }
 
     before do
       sign_in(user.email, user.password)
     end
 
-    scenario 'own page has link to edit profile' do
-      visit user_path(user)
-      click_link 'Edit Profile'
-      expect(current_path).to eq(edit_user_registration_path)
-    end
+    context 'own page' do
+      scenario 'has link to edit profile' do
+        visit user_path(user)
+        click_link 'Edit Profile'
+        expect(current_path).to eq(edit_user_registration_path)
+      end
 
+      scenario 'has link to create new place' do
+        visit user_path(user)
+        expect has_link?(new_place_path)
+      end
+    end
   end
 
 end
