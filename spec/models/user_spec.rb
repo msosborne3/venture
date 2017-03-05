@@ -15,6 +15,13 @@ RSpec.describe User, type: :model do
 
   it { should have_many(:following_relationships) }
 
+  # Tests the full_name method of user
+  describe ".full_name" do
+    it 'should return user first_name and last_name' do
+      expect(@user1.full_name).to eq("#{@user1.first_name} " + "#{@user1.last_name}")
+    end
+  end
+
   context 'user1 follows user2' do
     before(:each) { @user1.follow(@user2.id) }
 
