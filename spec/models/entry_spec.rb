@@ -6,14 +6,9 @@ RSpec.describe Entry, type: :model do
     @entry = @user.entries.build
   end
 
-  it "belongs to a user" do
-    expect(@entry.user).to eq(@user)
-  end
+  it { should belong_to(:user) }
 
-  it "has many comments" do
-    @entry.comments.build
-    expect(@entry.comments.length).to eq(1)
-  end
+  it { should have_many(:comments) }
 
   # Tests the search class method of Entry class.
   describe '#search' do
