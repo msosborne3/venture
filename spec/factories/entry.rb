@@ -2,7 +2,7 @@ require 'faker'
 
 FactoryGirl.define do
   factory :entry do
-    title { Faker::Name.first_name }
+    title { Faker::Lorem.sentence }
     content { Faker::Lorem.paragraph }
     
     association :user
