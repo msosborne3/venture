@@ -7,25 +7,13 @@ RSpec.describe User, type: :model do
     @user2 = FactoryGirl.create(:user)
   end
 
-  it "has many entries" do
-    @user1.entries.create
-    expect(@user1.entries.count).to be(1)
-  end
+  it { should have_many(:entries) }
 
-  it "has many places" do
-    @user1.places.create
-    expect(@user1.places.count).to be(1)
-  end
+  it { should have_many(:places) }
 
-  it "has many follower_relationships" do
-    @user1.follower_relationships.create
-    expect(@user1.follower_relationships.length).to eq(1)
-  end
+  it { should have_many(:follower_relationships) }
 
-  it "has many following_relationships" do
-    @user1.following_relationships.create
-    expect(@user1.following_relationships.length).to eq(1)
-  end
+  it { should have_many(:following_relationships) }
 
   context 'user1 follows user2' do
     before(:each) { @user1.follow(@user2.id) }
