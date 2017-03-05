@@ -1,10 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Entry, type: :model do
-  before do
-    @user = User.create(first_name: "Rory", last_name: 'Gilmore', email: 'rory@starshollow.com', password: 'logan4lyfe', password_confirmation: 'logan4lyfe')
-    @entry = @user.entries.build
-  end
 
   it { should belong_to(:user) }
 
@@ -13,9 +9,8 @@ RSpec.describe Entry, type: :model do
   # Tests the search class method of Entry class.
   describe '#search' do
     before do
-      @entry1 = Entry.create(title: "Greece is awesome")
-      @entry2 = Entry.create(title: "Checkout my trip to New York!")
-      @user.entries << [@entry1, @entry2]
+      @entry1 = FactoryGirl.create(:entry, title: "Greece is awesome")
+      @entry2 = FactoryGirl.create(:entry, title: "Checkout my trip to New York!")
     end
 
     # Tests that if no entries match the search, no entries will be returned
