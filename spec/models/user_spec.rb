@@ -3,8 +3,8 @@ require 'rails_helper'
 # Tests the basic associations of the user model.
 RSpec.describe User, type: :model do
   before(:each) do
-    @user1 = User.create(first_name: "Rory", last_name: 'Gilmore', email: 'rory@starshollow.com', password: 'logan4lyfe', password_confirmation: 'logan4lyfe')
-    @user2 = User.create(first_name: "Logan", last_name: "Huntzberger", email: 'logan@huntzberger.com', password: 'coffee', password_confirmation: "coffee")
+    @user1 = FactoryGirl.create(:user)
+    @user2 = FactoryGirl.create(:user)
   end
 
   it "has many entries" do
@@ -86,6 +86,10 @@ RSpec.describe User, type: :model do
 
   # Tests the search class method of User class.
   describe '#search' do
+    before(:each) do
+      @user1.update(first_name: "Rory", last_name: 'Gilmore', email: 'rory@starshollow.com')
+      @user2.update(first_name: "Logan", last_name: "Huntzberger", email: 'logan@huntzberger.com')
+    end
 
     # Tests that if no users match the search, no users will be returned
     it 'does not return any users if none match' do
