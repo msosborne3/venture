@@ -2,11 +2,6 @@ require 'rails_helper'
 
 # Tests the basic associations of the place model.
 RSpec.describe Place, type: :model do
-  before(:each) do
-    @user = User.create(first_name: "Rory", last_name: 'Gilmore', email: 'rory@starshollow.com', password: 'logan4lyfe', password_confirmation: 'logan4lyfe')
-    @place = Place.create
-    @user.places << @place
-  end
 
   it { should belong_to(:user) }
   
@@ -15,9 +10,8 @@ RSpec.describe Place, type: :model do
   # Tests the search class method of Place class.
   describe '#search' do
     before do
-      @place1 = Place.create(name: "Greece")
-      @place2 = Place.create(name: "New York")
-      @user.places << [@place1, @place2]
+      @place1 = FactoryGirl.create(:place, name: "Greece")
+      @place2 = FactoryGirl.create(:place, name: "New York")
     end
 
     # Tests that if no places match the search, no places will be returned
