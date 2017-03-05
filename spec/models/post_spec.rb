@@ -4,18 +4,9 @@ require 'rails_helper'
 RSpec.describe Place, type: :model do
   let(:user) { User.create(first_name: "Rory", last_name: 'Gilmore', email: 'rory@starshollow.com', password: 'logan4lyfe', password_confirmation: 'logan4lyfe') }
   let(:place) { user.places.build }
-  let(:post) { place.posts.build }
+  subject(:post) { place.posts.build }
 
-  #before(:each) do
-    # Create a user, place, and post to test the features
-  #  @user = User.create(first_name: "Rory", last_name: 'Gilmore', email: 'rory@starshollow.com', password: 'logan4lyfe', password_confirmation: 'logan4lyfe')
-  #  @place = @user.places.build
-  #  @post = @place.posts.build
-  #end
-
-  it "belongs to a place" do
-    expect(post.place_id).to eq(place.id)
-  end
+  it { should belong_to(:place) }
 
   # Tests the post_user method of the Post model.
   describe ".post_user" do
