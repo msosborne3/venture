@@ -67,6 +67,8 @@ group :test, :development do
   gem "pry"
   gem "guard-rspec", require: false
   gem "thin"
+  gem 'faker'
+  gem 'shoulda'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
