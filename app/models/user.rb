@@ -22,7 +22,6 @@ class User < ApplicationRecord
                     :default_url => ':style/default.png',
                     :styles => { :small => "45x45#", :thumb => "80x80#", :medium => "140x140#"},
                     :storage => :s3,
-                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
                     :bucket => 'venturebucket'
 
 
