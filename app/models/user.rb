@@ -18,7 +18,14 @@ class User < ApplicationRecord
   has_many :places
   has_many :posts, :through => :places
 
-  has_attached_file :profile_picture, default_url: ':style/default.png', styles: { :small => "45x45#", :thumb => "80x80#", :medium => "140x140#"}
+  has_attached_file :profile_picture,
+                    :default_url => ':style/default.png',
+                    :styles => { :small => "45x45#", :thumb => "80x80#", :medium => "140x140#"},
+                    :storage => :s3,
+                    :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+                    :bucket => 'venturebucket'
+
+
   validates_attachment_content_type :profile_picture, content_type: /\Aimage\/.*\z/
 
 
