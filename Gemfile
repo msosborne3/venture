@@ -43,6 +43,7 @@ gem 'devise'
 gem 'bootstrap-sass'
 
 gem 'paperclip'
+gem 'aws-sdk', '~> 2.3'
 
 gem 'omniauth-facebook'
 
