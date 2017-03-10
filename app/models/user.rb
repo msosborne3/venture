@@ -22,7 +22,9 @@ class User < ApplicationRecord
                     :default_url => ':style/default.png',
                     :styles => { :small => "45x45#", :thumb => "80x80#", :medium => "140x140#"},
                     :storage => :s3,
-                    :bucket => 'venturebucket'
+                    :s3_credentials => "#{Rails.root}/config/s3.yml",
+                    :bucket => 'venturebucket',
+                    :url => ":s3_domain_url"
 
 
   validates_attachment_content_type :profile_picture, content_type: /\Aimage\/.*\z/
