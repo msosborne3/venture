@@ -54,7 +54,7 @@ class User < ApplicationRecord
 
   # Finds user where search term matches first_name, last_name, or email
   def self.search(search)
-    where("first_name LIKE ? OR last_name LIKE ? OR email LIKE ?", "%#{search}%", "%#{search}%", "%#{search}%") 
+    where("first_name ILIKE ? OR last_name ILIKE ? OR email ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%") 
   end
 
   # Gets information from facebook
