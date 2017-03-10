@@ -6,7 +6,7 @@ class Entry < ApplicationRecord
 
   # Finds entry where search term matches title
   def self.search(search)
-  where("title LIKE ?", "%#{search}%") 
+  where("title ILIKE ?", "%#{search}%") 
   end
 
 end

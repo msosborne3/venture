@@ -12,6 +12,6 @@ class Post < ApplicationRecord
 
   # Finds post where search term matches description or link
   def self.search(search)
-  where("description LIKE ? OR link LIKE ?", "%#{search}%", "%#{search}%") 
+  where("description ILIKE ? OR link ILIKE ?", "%#{search}%", "%#{search}%") 
   end
 end

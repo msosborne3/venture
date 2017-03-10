@@ -6,6 +6,6 @@ class Place < ApplicationRecord
 
   # Finds place where search term matches name
   def self.search(search)
-    where("name LIKE ?", "%#{search}%") 
+    where("name ILIKE ?", "%#{search}%") 
   end
 end
