@@ -20,7 +20,7 @@ class User < ApplicationRecord
 
   has_attached_file :profile_picture,
                     :default_url => ':style/default.png',
-                    :styles => { :small => "45x45#", :thumb => "80x80#", :medium => "140x140#"},
+                    :styles => { :small => "45x45#", :thumb => "80x80#", :medium => "140x140#"}
 
 
   validates_attachment_content_type :profile_picture, content_type: /\Aimage\/.*\z/
