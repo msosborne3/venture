@@ -2,3 +2,4 @@
 /coverage/
 .bundle/
 config/s3.yml
+.env
