@@ -31,9 +31,9 @@
             whether or not the current user is already following the
             displayed user -->
         <% if current_user.following?(user.id) %>
-            <%= link_to "Unfollow", unfollow_user_path, method: :post, class: "btn btn-default" %><br>
+            <%= link_to "Unfollow", unfollow_user_path, class: "btn btn-default" %><br>
         <% else %>
-            <%= link_to "Follow", follow_user_path, method: :post, class: "btn btn-default" %><br>
+            <%= link_to "Follow", follow_user_path, class: "btn btn-default" %><br>
         <% end %> <!-- ends if current_user.following?(@user.id) -->
       <% end %> <!-- ends if @user = current_user -->
     <% end %> <!-- ends if current_user -->

@@ -11,8 +11,8 @@ Rails.application.routes.draw do
     resources :posts
   end
 
-  post '/users/:id/follow_user', to: 'relationships#follow_user', as: :follow_user
-  post '/users/:id/unfollow_user', to: 'relationships#unfollow_user', as: :unfollow_user
+  get '/users/:id/follow_user', to: 'relationships#follow_user', as: :follow_user
+  get '/users/:id/unfollow_user', to: 'relationships#unfollow_user', as: :unfollow_user
   get '/users/:id/following', to: 'users#following', as: :following
   get '/users/:id/followers', to: 'users#followers', as: :followers
   get '/users/:id/journal', to: 'users#journal', as: :journal
