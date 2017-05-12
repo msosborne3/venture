@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
 
   # list all entries
   def index
-    if current_user
+    if current_user && Entry.of_followed_users(current_user.following).length > 0
       @entries = Entry.of_followed_users(current_user.following).order('created_at DESC')
     else
       @entries = Entry.all
