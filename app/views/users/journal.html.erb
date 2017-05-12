@@ -3,7 +3,9 @@
 <h2 class="heading">Journal</h2>
 
 <div class="heading">
-  <%= link_to "New Journal Entry", new_entry_path, class: 'btn btn-default' %>
+  <% if @user == current_user %>
+    <%= link_to "New Journal Entry", new_entry_path, class: 'btn btn-default' %>
+  <% end %>
 </div>
 
   <% if @user.entries.length > 0 %>
