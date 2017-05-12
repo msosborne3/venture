@@ -4,10 +4,8 @@ class PlacesController < ApplicationController
 
   # list all of a user's places
   def index
-    if current_user
-      if Place.of_followed_users(current_user.following).length > 0
-        @places = Place.of_followed_users(current_user.following).order('created_at DESC')
-      end
+    if current_user && Place.of_followed_users(current_user.following).length > 0
+      @places = Place.of_followed_users(current_user.following).order('created_at DESC')
     else
       @places = Place.all
     end
